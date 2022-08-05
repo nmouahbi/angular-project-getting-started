@@ -15,7 +15,8 @@ import { Component} from '@angular/core';
             <span>Location: {{event.location.address}}</span>
             <span>&nbsp;</span>
             <span>{{event.location.city}}, {{event.location.country}}</span>
-            
+            <span>helloddddd</span>
+
      </div>
       </div>
       `
