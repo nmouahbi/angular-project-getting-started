@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import { Component , OnInit} from '@angular/core';
+import { EventService } from './shared/event.service';
+
 
 @Component({ 
     selector: 'event-list',
@@ -6,7 +8,10 @@ import { Component} from '@angular/core';
     <div> 
     <h1 >Event List</h1>
     <hr>
-    <event-thumbnail  [event]="event1"></event-thumbnail>
+    <div class="row">
+        <div class="col-md-5" *ngFor="let event of events">
+    <event-thumbnail [event]="event"></event-thumbnail>
+    </div>
 </div>
 `,
 styles: [`
@@ -15,19 +20,15 @@ styles: [`
 `]
 })
 
-export class EventListComponenet {
+export class EventListComponenet implements OnInit {
 
-    event1 = {
-        id: 1,
-        name: 'Angular Connect',
-        date: '9/26/2036',
-        time: '10:00 am',
-        price: 599.99,
-        imageUrl: '/assets/images/test.jpg',
-        location: {
-            address: '1057 DT',
-            city: 'London',
-            country: 'England'
-        }
+events: any
+
+ constructor( private eventService: EventService, ) { 
+  }
+
+    ngOnInit() {
+        this.events=this.eventService.getEvents()
     }
+  
 }

@@ -3,6 +3,7 @@
 .hoverwell{
     background: rgb(102, 94, 94);
     color: #2f96b4;
+    margin: 10px;
 }
 .hoverwell:hover {
     background-color: #cad3dd;
