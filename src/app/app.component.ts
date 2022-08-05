@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<event-list></event-list>'
- 
+  template: ` 
+  <app-navbar></app-navbar>
+  <event-list></event-list>
+  `
 })
 export class AppComponent {
   title = 'angular-project';

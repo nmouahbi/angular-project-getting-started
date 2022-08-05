@@ -6,10 +6,13 @@ import { Component} from '@angular/core';
     <div> 
     <h1 >Event List</h1>
     <hr>
-    <event-thumbnail [event]="event1"></event-thumbnail>
-
+    <event-thumbnail  [event]="event1"></event-thumbnail>
 </div>
-`
+`,
+styles: [`
+.pad-left {margin-left: 10px;}
+.well div {color: red;}
+`]
 })
 
 export class EventListComponenet {
