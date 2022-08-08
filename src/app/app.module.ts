@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { EventListComponenet } from './events/event-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { EventService } from './events/shared/event.service';
@@ -17,8 +16,7 @@ import { appRoutes } from './routes';
     AppComponent,
     EventListComponenet,
     EventThumbnailComponent,
-    NavbarComponent,
-    EventDetailsComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
